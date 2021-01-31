@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/tips">
+
+    <fragment
+        android:id="@+id/tips"
+        android:name="com.example.finesse.Tips"
+        android:label="@string/tips_label"
+        tools:layout="@layout/fragment_tips" >
+        <action
+            android:id="@+id/action_tips_to_analyse"
+            app:destination="@id/analyse" />
+        <action
+            android:id="@+id/action_tips_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_tips_to_library"
+            app:destination="@id/library" />
+    </fragment>
+    <fragment
+        android:id="@+id/analyse"
+        android:name="com.example.finesse.Analyse"
+        android:label="@string/analyse_label"
+        tools:layout="@layout/fragment_analyse" >
+        <action
+            android:id="@+id/action_analyse_to_tips"
+            app:destination="@id/tips" />
+        <action
+            android:id="@+id/action_analyse_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_analyse_to_library"
+            app:destination="@id/library" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.finesse.Profile"
+        android:label="@string/profile_label"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_library"
+            app:destination="@id/library" />
+        <action
+            android:id="@+id/action_profile_to_tips"
+            app:destination="@id/tips" />
+        <action
+            android:id="@+id/action_profile_to_analyse2"
+            app:destination="@id/analyse" />
+    </fragment>
+    <fragment
+        android:id="@+id/library"
+        android:name="com.example.finesse.Library"
+        android:label="@string/library_label"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_library_to_tips"
+            app:destination="@id/tips" />
+        <action
+            android:id="@+id/action_library_to_analyse"
+            app:destination="@id/analyse" />
+        <action
+            android:id="@+id/action_library_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+</navigation>
