@@ -3,4 +3,5 @@
     <dimen name="exercise_padding">10dp</dimen>
     <dimen name="exercise_margin">10dp</dimen>
     <dimen name="capture_button_size">100dp</dimen>
+    <dimen name="capture_button_margin">20dp</dimen>
 </resources>

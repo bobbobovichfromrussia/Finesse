@@ -48,6 +48,7 @@ public class Analyse extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_analyse, container, false);
         mCamera = getCameraInstance();
+        mCamera.setDisplayOrientation(90);
         mPreview = new CameraPreview(requireActivity(), mCamera);
         FrameLayout preview = (FrameLayout) view.findViewById(R.id.preview_container);
         preview.addView(mPreview);
